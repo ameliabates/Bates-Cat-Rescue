@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <style>
+    body {
+      font-family: Georgia;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      color: #D47C4E;
+    }
+    header {
+            background-color: #fff;
+            color: #D47C4E;
+            text-align: Center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: Center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #D47C4E;
+            text-decoration: none;
+           transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #432616;
+        }
+        
+    h1 {
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      width: calc(100% - 12px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .pos_label {
+      display: inline-block;
+      margin-right: 20px; 
+    }
+    button {
+      background-color: #D47C4E;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #432616;
+    }
+    button:active {
+      background-color: #432616;
+    }
+	   footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            color: #D47C4E;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
+</head>
+<body>
+   <header>
+        <img src="logo.png"width="300" height="300">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="available_cats.html">Available Cats</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Cat Adoption Form</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+	    
+    </header>
+  
+  <hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
+  <form action="https://formspree.io/f/mbjnyznp" method="POST">
+  <h1>Cat Adoption Form</h1>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Your Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+    
+    <label for="cat_name">Cat's Name:</label>
+    <input type="text" id="cat_name" name="cat_name" required>
+    
+    <p>Do you:</p>
+    <input type="radio" id="Rent" name="Housing" value="Rent" required>
+    <label class="pos_label" for="Rent">Rent</label>
+    <input type="radio" id="Own" name="Housing" value="Own" required>
+    <label class="pos_label" for="Own">Own</label>
+    
+    <p>Are you allowed pets on your lease?</p>
+    <input type="radio" id="Yes" name="Lease" value="Yes" required>
+    <label class="pos_label" for="Yes">Yes</label>
+    <input type="radio" id="No" name="Lease" value="No" required>
+    <label class="pos_label" for="No">No</label> 
+    <p> </p>
+    <label for="landlord_name">Landlord's name:</label>
+    <input type="text" id="landlord_name" name="landlord_name" >
+    
+    <label for="current_pets">Information on pets living in the home currently:</label>
+    <textarea id="current_pets" name="current_pets" rows="4" required></textarea>
+    
+    <p> Which of the following are reasons you are getting a cat: </p>
+    <input type="checkbox" id="reason1" name="reason1" value="Self">
+  	<label class="pos_label"> Companion for self</label><br>
+  	<input type="checkbox" id="reason2" name="reason2" value="Pet">
+  	<label class="pos_label"> Companion for pet</label><br>
+  	<input type="checkbox" id="reason3" name="reason3" value="Family">
+  	<label class="pos_label"> Companion for family</label><br>
+    <input type="checkbox" id="reason4" name="reason4" value="Mouser">
+  	<label class="pos_label"> Hunter/Mouser</label><br>
+    
+    <br>
+    
+    <p> Will your cat primarily be an indoor or outdoor pet? </p>
+    <input type="checkbox" id="type1" name="type1" value="Indoor">
+  	<label class="pos_label"> Indoor</label><br>
+  	<input type="checkbox" id="type2" name="type2" value="Outdoor">
+  	<label class="pos_label"> Outdoor</label><br>
+    <input type="checkbox" id="type3" name="type3" value="Both">
+  	<label class="pos_label"> Both</label><br>
+    
+     <br>
+    <label for="reason">Reason for Adoption:</label>
+    <textarea id="reason" name="reason" rows="4" required></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+	<footer>
+<hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
+    <h3> Bates Cat Rescue </h3>
+    <p>  </p>
+    <p> Eugene, OR </p>
+    </footer>
+</body>
+</html>

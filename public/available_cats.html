@@ -1,0 +1,160 @@
+<style>
+       body {
+            font-family: Georgia;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            color: #D47C4E;
+        }
+        header {
+            background-color: #fff;
+            color: #D47C4E;
+            text-align: Center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: Center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #D47C4E;
+            text-decoration: none;
+           transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #432616;
+        }
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            color: #D47C4E;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+#catList {
+    margin-top: 20px;
+  }
+
+  .cat {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	  word-wrap: break-word;
+  }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <header>
+        <img src="logo.png"width="300" height="300">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="available_cats.html">Available Cats</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Cat Adoption Form</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+	    
+    </header>
+	<hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
+  <h3> Available Cats</h3>
+    <div id="catList">
+      <!-- Cat information will be displayed here -->
+    </div>
+ 
+  
+<footer>
+<hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
+    <h3> Bates Cat Rescue </h3>
+    <p>  </p>
+    <p> Eugene, OR </p>
+    </footer>
+<script> 
+      async function fetchCats() {
+      try {
+        const response = await fetch('/cats');
+        const cats = await response.json();
+        displayCats(cats);
+      } catch (error) {
+        console.error('Error fetching cat data:', error);
+      }
+    }
+
+
+    function displayCats(cats) {
+      const catList = document.getElementById('catList');
+      catList.innerHTML = '';
+      cats.forEach(cat => {
+        const catDiv = document.createElement('div');
+        catDiv.className = 'cat';
+        catDiv.innerHTML = `
+          <h4>${cat.Name}</h4>
+          <p><strong>Age:</strong> ${cat.Age}</p>
+          <p><strong>Breed:</strong> ${cat.Breed}</p>
+          <p><strong>Color:</strong> ${cat.Color}</p>
+          <p><strong>Description:</strong> ${cat.Description}</p>
+        `;
+        catList.appendChild(catDiv);
+      });
+    }
+
+    window.onload = fetchCats;
+  </script>
+</body>
+	  
+</html>

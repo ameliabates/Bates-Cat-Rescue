@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bates Cat Rescue</title>
+    <style>
+       
+        body {
+            font-family: Georgia;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            color: #D47C4E;
+        }
+        header {
+            background-color: #fff;
+            color: #D47C4E;
+            text-align: Center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: Center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #D47C4E;
+            text-decoration: none;
+           transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #432616;
+        }
+        
+        .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+        section {
+        padding: 40px 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            color: #D47C4E;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+	
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .flex-item {
+            flex: 0 0 48%;
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .flex-item {
+                flex: 0 0 100%;
+            }
+        }
+        
+
+	
+	    input[type=text], select, textarea {
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	  margin-top: 6px;
+	  margin-bottom: 16px;
+	  resize: vertical;
+	}
+	
+	input[type=submit] {
+	  background-color: #D47C4E;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	}
+	
+	input[type=submit]:hover {
+	  background-color: #432616;
+	}
+	
+	.container {
+	  border-radius: 5px;
+	  background-color: transparent;
+	  padding: 20px;
+	  color: #D47C4E
+	}
+	.linked {
+  	  color: #D47C4E;
+ 	  background-color: transparent;
+ 	  text-decoration: underline;
+	}
+    .linked:hover {
+  background-color: #432616;
+  * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png"width="300" height="300">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="available_cats.html">Available Cats</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Cat Adoption Form</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+	    
+    </header>
+ <hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
+        <section id="contact">
+            <h2>Contact Us</h2>
+	<div class="container">
+	  <form action="https://formspree.io/f/mbjnyznp" method="post">
+	    <label for="fname">First Name</label>
+	    <input type="text" id="fname" name="firstname" placeholder="Your first name..." required="">
+	
+	    <label for="lname">Last Name</label>
+	    <input type="text" id="lname" name="lastname" placeholder="Your last name..." required="">
+	
+	    <label for="email-address">Email Address</label>
+   	    <input type="email" name="_replyto" id="email-address" placeholder="email@gmail.com..." required="">
+	    
+	
+	    <p><label for="subject">Subject</label>
+	    <textarea id="subject" name="subject" placeholder="Write something..." required="" style="height:200px"> </textarea></p>
+	
+	    <input type="submit" value="Submit">
+  </form>
+</div>
+        </section>
+    </div>
+	<footer>
+    <hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
+    <h3> Bates Cat Rescue </h3>
+    <p>  </p>
+    <p> Eugene, OR </p>

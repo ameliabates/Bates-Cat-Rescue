@@ -1,128 +1,140 @@
-<style>
-       body {
-            font-family: Georgia;
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            color: #D47C4E;
-        }
-        header {
-            background-color: #fff;
-            color: #D47C4E;
-            text-align: Center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: Center;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #D47C4E;
-            text-decoration: none;
-           transition: all 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #432616;
-        }
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-h1 {
-  text-align: center;
-}
-footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #fff;
-            color: #D47C4E;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"],
-select,
-textarea {
-  width: calc(100% - 12px);
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-button:active {
-  background-color: #3e8e41;
-}
-#catList {
-    margin-top: 20px;
-  }
-
-  .cat {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-	  word-wrap: break-word;
-  }
-</style>
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bates Cat Rescue</title>
+    <style>
+       body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #DCC7AA;
+            color: #6B7A8F;
+        }
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+        }
+       h2 {
+            color: #6B7A8F;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+       nav {
+        background-color: #F7882F;
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            padding: 12px 18px;
+            transition: color 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        nav ul li a::after {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 0;
+            background: #F7C331;
+            transition: width 0.3s ease-in-out;
+            margin-top: 4px;
+            border-radius: 2px;
+        }
+
+        nav ul li a:hover {
+            color: #FFF5E1;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            padding: 20px;
+            
+        }
+        h3{
+            color: #6B7A8F;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: white;
+            color: #F7882F;
+            margin-top: 20px;
+        }
+        #catList {
+            margin-top: 20px;
+            background-color: white;
+          }
+
+          .cat {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+              word-wrap: break-word;
+          }
+    </style>
+</head>
 <body>
     <header>
-        <img src="logo.png"width="300" height="300">
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="available_cats.html">Available Cats</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="resources.html">Cat Adoption Form</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-	    
+        <img src="logo.png" width="200" height="200" alt="Bates Cat Rescue Logo">
     </header>
-	<hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
-  <h3> Available Cats</h3>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="available_cats.html">Available Cats</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="resources.html">Cat Adoption Form</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <h3> Available Cats</h3>
     <div id="catList">
       <!-- Cat information will be displayed here -->
     </div>
+    </div>
  
   
-<footer>
-<hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
-    <h3> Bates Cat Rescue </h3>
-    <p>  </p>
-    <p> Eugene, OR </p>
+    <footer>
+        <p>Bates Cat Rescue - Eugene, OR</p>
     </footer>
 <script> 
       async function fetchCats() {

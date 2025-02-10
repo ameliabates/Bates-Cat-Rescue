@@ -6,301 +6,225 @@
     <title>Bates Cat Rescue</title>
     <style>
         body {
-            font-family: Georgia;
+            font-family: Georgia, serif;
             margin: 0;
             padding: 0;
-            background-color: transparent;
-            color: #D47C4E;
+            background-color: #DCC7AA;
+            color: #6B7A8F;
+        }
+        h2 {
+            color: #6B7A8F;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
         header {
-            background-color: #fff;
-            color: #D47C4E;
-            text-align: Center;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: Center;
+        nav {
+        background-color: #F7882F;
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #D47C4E;
-            text-decoration: none;
-           transition: all 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #432616;
-        }
-        
-        .column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px;
-}
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            padding: 12px 18px;
+            transition: color 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        nav ul li a::after {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 0;
+            background: #F7C331;
+            transition: width 0.3s ease-in-out;
+            margin-top: 4px;
+            border-radius: 2px;
+        }
+
+        nav ul li a:hover {
+            color: #FFF5E1;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
         section {
-        padding: 40px 20px;
-            margin: 20px;
-            border-radius: 5px;
+            padding: 20px;
+        }
+        h3{
+            color: #6B7A8F;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #fff;
-            color: #D47C4E;
+            padding: 15px;
+            background-color: white;
+            color: #F7882F;
+            margin-top: 20px;
+        }
+        .slideshow-container {
+            max-width: 1000px;
             position: relative;
-            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .mySlides {
+            display: none;
+            animation: fade 1.5s ease-in-out;
+        }
+
+        @keyframes fade {
+            from {opacity: 0.5;}
+            to {opacity: 1;}
+        }
+
+        .mySlides img {
             width: 100%;
+            border-radius: 12px;
         }
-	
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
+
+        /* Caption Styling */
+        .text {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+            border-radius: 8px;
         }
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 12px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            transition: 0.3s ease;
+            user-select: none;
         }
-        .flex-item {
-            flex: 0 0 48%;
-            margin-bottom: 20px;
+
+        .prev {
+            left: 15px;
         }
-        @media screen and (max-width: 768px) {
-            .flex-item {
-                flex: 0 0 100%;
-            }
+
+        .next {
+            right: 15px;
         }
-        
 
-	
-	    * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png"width="300" height="300">
-        
-        <nav>
-            <ul>
-               <li><a href="index.html">Home</a></li>
-                <li><a href="available_cats.html">Available Cats</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="resources.html">Cat Adoption Form</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-	    
+        <img src="logo.png" width="200" height="200" alt="Bates Cat Rescue Logo">
     </header>
-	<hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="available_cats.html">Available Cats</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="resources.html">Cat Adoption Form</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <section id="about">
-            <h2>About</h2>
-            <p>
-		     
-
-<div>Welcome to Bates Cat Rescue, a sanctuary for our feline friends in need. Founded in 2024, our mission is simple: to provide a safe and loving environment for cats who have been abandoned, abused, or neglected. </div> 
-
-  <p></p>
-
-<div> At Bates’, we believe that every cat deserves a chance at a happy and fulfilling life. Our dedicated team of volunteers works tirelessly to rescue, rehabilitate, and rehome cats of all ages, breeds, and backgrounds. From tiny kittens to senior cats, we are committed to giving each cat the care, attention, and support they need to thrive. </div> 
-
-    <p></p>
-
-<div> Our rescue center provides a temporary haven for cats while they await their forever homes. We ensure that they receive proper medical care, nutritious meals, and plenty of socialization and enrichment activities. All cats are spayed/neutered before adoption to help control the pet population and prevent future homelessness. </div> 
-
-    <p></p>
-
-<div> But our work doesn't stop once a cat finds a new family. We offer ongoing support and resources to adopters to ensure a smooth transition and promote responsible pet ownership. We also advocate for animal welfare and raise awareness about the importance of adoption, spaying/neutering, and compassionate care for all animals. </div> 
-
-    <p></p>
-
-<div> Whether you're looking to adopt a new feline friend or simply want to support our cause, we invite you to join us in making a difference in the lives of cats in need. Together, we can create a world where every cat is valued, cherished, and loved. Welcome to Bates Cat Rescue – where every cat's story deserves a happy ending. </div> 
-	    </p>
-
-<div class = "row">
-<div class ="column">
-		<div><h5> Location </h5></div>
-         <div>Monday - Thursday: 10 a.m. - 7 p.m.</div><div> Friday: 10 a.m - 6 p.m. </div><div>Saturday: 10 a.m. - 6 p.m.</div><div>Sunday: Closed</div>
-        
-        </div>
-        <div class ="column">
-        <div><h5> Hours </h5></div>
-         <div><div>1600 Pennsylvania Ave,</div><div>Eugene, OR</div></a></div>
-        
-        </div>
-        <div>
-</p>
-<h3> Recent adoptions </d3>
-</pre>
-	</section>
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="slidephoto1.jpg" style="width:100%">
-  <div class="text"> Bonded pair Marmalade and Butterscotch in their forever home </div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="slidephoto2.jpg" style="width:100%">
-  <div class="text"> Our oldest resident Casper just went home! </div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="slidephoto3.jpg" style="width:100%">
-  <div class="text"> Patch has been adopted </div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-
-	</div>
-	<footer>
-<hr style="height:2px;border-width:0;color:#432616;background-color:#432616">
-    <h3> Bates Cat Rescue </h3>
-    <p>  </p>
-    <p> Eugene, OR </p>
+        <section>
+            <h2>About Us</h2>
+            <p>Welcome to Bates Cat Rescue, a sanctuary for our feline friends in need. Founded in 2024, we provide a safe and loving environment for cats who have been abandoned, abused, or neglected.</p>
+        </section>
+        <section>
+            <h3>Recent Adoptions</h3>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="slidephoto1.jpg" style="width:100%">
+                    <div class="text">Marmalade and Butterscotch in their forever home</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="slidephoto2.jpg" style="width:100%">
+                    <div class="text">Casper just went home!</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="slidephoto3.jpg" style="width:100%">
+                    <div class="text">Patch has been adopted</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Bates Cat Rescue - Eugene, OR</p>
     </footer>
-    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+
+        setInterval(() => plusSlides(1), 9000);
+    </script>
 </body>
 </html>
-
 
